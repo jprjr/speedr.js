@@ -268,15 +268,15 @@ speedr.SortedMap = (function(superClass) {
     return this.updateLength();
   };
 
-  SortedMap.prototype.pop = function() {
-    this.keys.pop();
-    this.vals.pop();
+  SortedMap.prototype.removeAt = function(counter) {
+    this.keys.splice(counter, 1);
+    this.vals.splice(counter, 1);
     return this.updateLength();
   };
 
-  SortedMap.prototype.shift = function() {
-    this.keys.shift();
-    this.vals.shift();
+  SortedMap.prototype.pop = function() {
+    this.keys.pop();
+    this.vals.pop();
     return this.updateLength();
   };
 
