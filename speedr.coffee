@@ -155,6 +155,11 @@ class speedr.SortedMap extends BaseMap
 		@vals.pop()
 		return @updateLength()
 		
+	shift: ->
+		@keys.shift()
+		@vals.shift()
+		return @updateLength()
+		
 	# note that these iterate from the top down
 	# (from smaller to larger)
 	iter: (counter) ->
