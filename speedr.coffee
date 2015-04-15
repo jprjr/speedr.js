@@ -151,8 +151,8 @@ class speedr.SortedMap extends BaseMap
 		return @updateLength()
 
 	removeAt: (counter) ->
-		@keys.splice(counter,1)
-		@vals.splice(counter,1)
+		@keys.splice(@length - 1 - counter,1)
+		@vals.splice(@length - 1 - counter,1)
 		return @updateLength()
 
 	pop: ->

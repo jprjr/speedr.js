@@ -269,8 +269,8 @@ speedr.SortedMap = (function(superClass) {
   };
 
   SortedMap.prototype.removeAt = function(counter) {
-    this.keys.splice(counter, 1);
-    this.vals.splice(counter, 1);
+    this.keys.splice(this.length - 1 - counter, 1);
+    this.vals.splice(this.length - 1 - counter, 1);
     return this.updateLength();
   };
 
